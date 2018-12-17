@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.Data.Json;
 
 namespace ManagedLbry
 {
@@ -17,7 +15,7 @@ namespace ManagedLbry
             this.password = password;
         }
 
-        public Task<JsonObject> Call(string method,
+        public Task<JObject> Call(string method,
             Dictionary<string, string> parameters = null)
         {
             return MakeRequest(lbrycrd_url, method, parameters,

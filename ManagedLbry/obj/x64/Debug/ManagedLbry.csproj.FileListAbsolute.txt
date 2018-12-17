@@ -1,0 +1,9 @@
+D:\workspace_VS\ManagedLbry\ManagedLbry\bin\x64\Debug\ManagedLbry.dll
+D:\workspace_VS\ManagedLbry\ManagedLbry\bin\x64\Debug\ManagedLbry.pdb
+D:\workspace_VS\ManagedLbry\ManagedLbry\bin\x64\Debug\Newtonsoft.Json.dll
+D:\workspace_VS\ManagedLbry\ManagedLbry\bin\x64\Debug\Newtonsoft.Json.pdb
+D:\workspace_VS\ManagedLbry\ManagedLbry\bin\x64\Debug\Newtonsoft.Json.xml
+D:\workspace_VS\ManagedLbry\ManagedLbry\obj\x64\Debug\ManagedLbry.csproj.CoreCompileInputs.cache
+D:\workspace_VS\ManagedLbry\ManagedLbry\obj\x64\Debug\ManagedLbry.csproj.CopyComplete
+D:\workspace_VS\ManagedLbry\ManagedLbry\obj\x64\Debug\ManagedLbry.dll
+D:\workspace_VS\ManagedLbry\ManagedLbry\obj\x64\Debug\ManagedLbry.pdb

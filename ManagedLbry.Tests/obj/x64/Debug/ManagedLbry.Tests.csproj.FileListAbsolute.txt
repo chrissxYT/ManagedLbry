@@ -1,0 +1,13 @@
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\ManagedLbry.Tests.exe.config
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\ManagedLbry.Tests.exe
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\ManagedLbry.Tests.pdb
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\ManagedLbry.dll
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\Newtonsoft.Json.dll
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\ManagedLbry.pdb
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\Newtonsoft.Json.pdb
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\bin\x64\Debug\Newtonsoft.Json.xml
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\obj\x64\Debug\ManagedLbry.Tests.csprojAssemblyReference.cache
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\obj\x64\Debug\ManagedLbry.Tests.csproj.CoreCompileInputs.cache
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\obj\x64\Debug\ManagedLbry.Tests.csproj.CopyComplete
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\obj\x64\Debug\ManagedLbry.Tests.exe
+D:\workspace_VS\ManagedLbry\ManagedLbry.Tests\obj\x64\Debug\ManagedLbry.Tests.pdb

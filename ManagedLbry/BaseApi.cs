@@ -1,16 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using Windows.Data.Json;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using System.Diagnostics;
+using Newtonsoft.Json.Linq;
+using System;
 
 namespace ManagedLbry
 {
     public class BaseApi
     {
+        static void dbg(string s)
+        {
+#if DEBUG
+            Console.WriteLine(s);
+#endif
+        }
+
         static uint request_id;
 
         /// <summary>
@@ -23,7 +29,7 @@ namespace ManagedLbry
         /// <param name="username">the username to auth with</param>
         /// <param name="password">the password corresponding to the username</param>
         /// <returns>a json reader to read the response</returns>
-        public static async Task<JsonObject> MakeRequest(string url, string method,
+        public static async Task<JObject> MakeRequest(string url, string method,
             Dictionary<string, string> parameters = null,
             string username = "", string password = "")
         {
@@ -34,9 +40,13 @@ namespace ManagedLbry
             http.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue("Authorization", username + ":" + password);
 
+            dbg("[BaseApi]Initialized the WebClient.");
+
             string body = "{\"jsonrpc\": \"2.0\", \"id\": \"" +
                   ++request_id + "\", \"method\": \"" + method +
                   (has_params ? "\", \"params\": {" : "\"}");
+
+            dbg("[BaseApi]Built body.");
 
             if (has_params)
             {
@@ -49,13 +59,20 @@ namespace ManagedLbry
                 body += "}";
             }
 
+            dbg("[BaseApi]Sending out POST.");
+
+            //BELOW LIES THE BUG
             string rr = await(await
                 http.PostAsync(url,
                 new StringContent(body, Encoding.UTF8,
                 "application/json-rpc")))
                 .Content.ReadAsStringAsync();
 
-            JsonObject resp = JsonValue.Parse(rr).GetObject();
+            dbg("[BaseApi]Got a response.");
+
+            JObject resp = JObject.Parse(rr);
+
+            dbg("[BaseApi]Parsed the response.");
 
             if (rr.Contains("\"result\""))
                 return resp;

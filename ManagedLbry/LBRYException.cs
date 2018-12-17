@@ -1,25 +1,24 @@
-﻿using System;
-using Windows.Data.Json;
+﻿using Newtonsoft.Json.Linq;
+using System;
 
 namespace ManagedLbry
 {
     class LBRYException : Exception
     {
-        public LBRYException(string what, int code) : base(what)
+        public LBRYException(string what, string code) : base(what)
         {
             LbryCode = code;
-            LbryResponse = JsonValue.Parse(what).GetObject();
+            LbryResponse = JObject.Parse(what);
         }
 
-        public LBRYException(string what_arg, JsonObject error)
+        public LBRYException(string what_arg, JObject error)
             : base(what_arg)
         {
-            LbryCode = (int)error.GetNamedObject("error")
-                .GetNamedNumber("code");
+            LbryCode = error.SelectToken("error", true).ToString();
             LbryResponse = error;
         }
         
-        public int LbryCode { get; private set; }
-        public JsonObject LbryResponse { get; private set; }
+        public string LbryCode { get; private set; } //im to lazy to parse this to an int
+        public JObject LbryResponse { get; private set; }
     }
 }
