@@ -1,0 +1,2 @@
+C:\Users\chrissicx\source\repos\ManagedLbry.UnitTest\ManagedLbry.UnitTest.csproj;x86
+C:\Users\chrissicx\source\repos\ManagedLbry\ManagedLbry.csproj;neutral
